@@ -4,14 +4,14 @@
    <link rel="stylesheet" href="css/estils.css">      (des de l'arrel) */
 
 :root {
-  --mari: #122542;
-  --teal: #0c6e73;
-  --ambre: #c9821f;
-  --tinta: #1b2430;
-  --tinta-suau: #57626c;
-  --fons: #f5f6f8;
-  --blanc: #ffffff;
-  --vora: #dde2e7;
+  --mari: #0f2027;
+  --teal: #2c5364;
+  --ambre: #0f2027;
+  --tinta: #2c5364;
+  --tinta-suau: #0f2027;
+  --fons: #2c5364;
+  --blanc: #0f2027;
+  --vora: #2c5364;
   --radi: 12px;
 }
 
