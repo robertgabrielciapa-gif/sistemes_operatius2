@@ -4,15 +4,15 @@
    <link rel="stylesheet" href="css/estils.css">      (des de l'arrel) */
 
 :root {
-  --mari: #0f172a;        /* Blau marí fosc */
-  --teal: #2563eb;        /* Blau principal */
-  --ambre: #f59e0b;       /* Taronja/groc per destacar */
-  --tinta: #1e293b;       /* Text principal */
-  --tinta-suau: #64748b;  /* Text secundari */
-  --fons: #f1f5f9;        /* Fons general */
-  --blanc: #ffffff;       /* Blanc */
-  --vora: #cbd5e1;        /* Vores */
-  --radi: 12px;           /* Arrodoniment */
+  --mari: #0f172a;
+  --teal: #2563eb;
+  --ambre: #f59e0b;
+  --tinta: #1e293b;
+  --tinta-suau: #64748b;
+  --fons: #f1f5f9;
+  --blanc: #ffffff;
+  --vora: #cbd5e1;
+  --radi: 12px;
 }
 
 * { box-sizing: border-box; }
