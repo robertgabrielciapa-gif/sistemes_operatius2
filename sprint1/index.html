@@ -36,69 +36,81 @@
       </tbody>
     </table>
 
-    <article class="apartat" id="apartat1">
-      <h2>1. Instal·lació del sistema operatiu</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Un cop arrencat
-         el suport d'instal·lació, cal seguir l'assistent i triar les opcions de
-         particionat abans de continuar. <strong>Aquest pas és irreversible</strong>,
-         així que revisa bé el disc de destinació.</p>
-      <ul>
-        <li>Arrencar des del USB o la imatge ISO.</li>
-        <li>Triar l'idioma i la distribució de teclat.</li>
-        <li>Configurar el particionat del disc.</li>
-        <li>Esperar que finalitzi la còpia d'arxius i reiniciar.</li>
-      </ul>
-      <img src="../img/exemple.svg" alt="Exemple de captura de pantalla de l'assistent d'instal·lació">
-      <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-         Un cop reiniciat el sistema, comprova que arrenca correctament i que
-         reconeix tot el maquinari abans de continuar amb el següent apartat.</p>
-      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
-    </article>
-    <article class="apartat" id="apartat2">
-      <h2>2. Configuració de xarxa bàsica</h2>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-         ut aliquip ex ea commodo consequat. La configuració de xarxa és
-         <strong>imprescindible</strong> per poder actualitzar el sistema i
-         instal·lar programari nou.</p>
-      <ul>
-        <li>Comprovar l'adreça IP assignada amb <code>ip a</code>.</li>
-        <li>Configurar una IP estàtica si el servei ho requereix.</li>
-        <li>Verificar la connectivitat amb <code>ping</code>.</li>
-      </ul>
-      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-         dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
-    </article>
-    <article class="apartat" id="apartat3">
-      <h2>3. Creació d'usuaris i grups</h2>
-      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui
-         blanditiis praesentium voluptatum deleniti atque corrupti. Cada
-         usuari nou s'hauria d'assignar al <strong>grup mínim necessari</strong>
-         segons les tasques que ha de fer.</p>
-      <img src="../img/exemple.svg" alt="Exemple de captura de pantalla de la gestió d'usuaris">
-      <ul>
-        <li>Crear l'usuari amb <code>useradd</code>.</li>
-        <li>Assignar contrasenya amb <code>passwd</code>.</li>
-        <li>Afegir l'usuari als grups necessaris amb <code>usermod -aG</code>.</li>
-      </ul>
-      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
-    </article>
-    <article class="apartat" id="apartat4">
-      <h2>4. Comprovació final</h2>
-      <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-         tempore, cum soluta nobis est eligendi optio cumque nihil impedit.
-         Abans de donar per acabat el sprint, revisa aquest resum:</p>
-      <ul>
-        <li>El sistema arrenca sense errors.</li>
-        <li>La xarxa respon correctament als <em>pings</em>.</li>
-        <li><strong>Els usuaris i grups creats coincideixen amb l'enunciat.</strong></li>
-      </ul>
-      <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-         fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-         sequi nesciunt.</p>
-      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
-    </article>
+    <title>Sprint 1 · Robert Ciapa</title>
+    
+    <main id="top"><h1>Sprint 1 · Documentació</h1><p>Robert Ciapa — Ubuntu en màquina virtual: instal·lació, xarxa, usuaris, paquets i GRUB.</p>
+    <nav><a href="#vm">1. Instal·lació de la màquina virtual</a><a href="#xarxa">2. Configuració de la xarxa bàsica</a><a href="#usuaris">3. Creació d'usuaris i grups</a><a href="#paquets">4. Gestió de paquets</a><a href="#grub">5. Gestor d'arrencada (GRUB2)</a></nav>
+    
+    <section id="vm"><h2>1. Instal·lació de la màquina virtual</h2>
+    <div class="step"><span class="n">1</span><div><p>Com ja tinc VirtualBox, començo creant una màquina virtual nova amb la ISO d'Ubuntu.</p><img src="img/00.png" alt="Captura 1" loading="lazy"></div></div>
+    <div class="step"><span class="n">2</span><div><p>Ajusto la RAM a 8248 MB i la CPU a 4 nuclis.</p><img src="img/01.png" alt="Captura 2" loading="lazy"></div></div>
+    <div class="step"><span class="n">3</span><div><p>Creo un disc dur virtual nou d'uns 23 GB, marcant l'opció de crear-lo ara i sense reservar tot l'espai de cop.</p><img src="img/02.png" alt="Captura 3" loading="lazy"></div></div>
+    <div class="step"><span class="n">4</span><div><p>Reviso el resum de la configuració i clico a Finish per crear-la.</p><img src="img/03.png" alt="Captura 4" loading="lazy"></div></div>
+    <div class="step"><span class="n">5</span><div><p>Inicio la màquina virtual i selecciono l'idioma de la instal·lació.</p><img src="img/04.png" alt="Captura 5" loading="lazy"></div></div>
+    <div class="step"><span class="n">6</span><div><p>Deixo les opcions d'accessibilitat per defecte i clico a Siguiente.</p><img src="img/05.png" alt="Captura 6" loading="lazy"></div></div>
+    <div class="step"><span class="n">7</span><div><p>Selecciono la distribució del teclat en espanyol i clico a Siguiente.</p><img src="img/06.png" alt="Captura 7" loading="lazy"></div></div>
+    <div class="step"><span class="n">8</span><div><p>Selecciono la connexió per cable per tenir Internet durant la instal·lació i clico a Siguiente.</p><img src="img/07.png" alt="Captura 8" loading="lazy"></div></div>
+    <div class="step"><span class="n">9</span><div><p>Selecciono Instalar Ubuntu per instal·lar el sistema al disc virtual.</p><img src="img/08.png" alt="Captura 9" loading="lazy"></div></div>
+    <div class="step"><span class="n">10</span><div><p>Trio la instal·lació interactiva per anar configurant el sistema pas a pas.</p><img src="img/09.png" alt="Captura 10" loading="lazy"></div></div>
+    <div class="step"><span class="n">11</span><div><p>Selecciono la instal·lació predeterminada, que només inclou les eines bàsiques i el navegador web.</p><img src="img/10.png" alt="Captura 11" loading="lazy"></div></div>
+    <div class="step"><span class="n">12</span><div><p>Marco la casella per instal·lar programari de tercers i controladors addicionals.</p><img src="img/11.png" alt="Captura 12" loading="lazy"></div></div>
+    <div class="step"><span class="n">13</span><div><p>Selecciono l'opció d'esborrar el disc per instal·lar Ubuntu des de zero al disc virtual.</p><img src="img/12.png" alt="Captura 13" loading="lazy"></div></div>
+    <div class="step"><span class="n">14</span><div><p>Configuro el nom d'usuari i la contrasenya del sistema i clico a Siguiente.</p><img src="img/13.png" alt="Captura 14" loading="lazy"></div></div>
+    <div class="step"><span class="n">15</span><div><p>Reviso el resum de tota la configuració i clico a Instalar per iniciar la instal·lació definitiva.</p><img src="img/14.png" alt="Captura 15" loading="lazy"></div></div>
+    <div class="step"><span class="n">16</span><div><p>Amb això ja tenim la màquina virtual Ubuntu instal·lada.</p></div></div>
+    <a class="up" href="#top">↑ Tornar a l'índex</a></section>
+    
+    <section id="xarxa"><h2>2. Configuració de la xarxa bàsica</h2>
+    <div class="step"><span class="n">1</span><div><p>Comprovar la IP. Abans de fer res al sistema, miro quina adreça IP té l'ordinador amb <code>ip a</code>. Així sé que la xarxa està activa i quina adreça té assignada. Si el servei que he de muntar ho requereix, li poso una IP fixa perquè no canviï.</p><img src="img/15.png" alt="Captura 16" loading="lazy"></div></div>
+    <div class="step"><span class="n">2</span><div><p>Després comprovo que tinc internet amb <code>ping -c 5 8.8.8.8</code>, que envia cinc missatges de prova a un servidor de Google. Si tornen tots i no se'n perd cap, vol dir que la xarxa funciona bé i ja puc actualitzar el sistema i instal·lar programes.</p><img src="img/16.png" alt="Captura 17" loading="lazy"></div></div>
+    <a class="up" href="#top">↑ Tornar a l'índex</a></section>
+    
+    <section id="usuaris"><h2>3. Creació d'usuaris i grups</h2>
+    <div class="step"><span class="n">1</span><div><p>Per a cada persona que ha d'utilitzar el sistema creo un usuari nou amb <code>sudo useradd -m -s /bin/bash nomusuari</code>, que a més li crea la carpeta personal. Després li assigno una contrasenya amb <code>sudo passwd nomusuari</code>, perquè pugui iniciar sessió. Finalment, si necessités aquest ordinador per a la feina i volgués retirar permisos innecessaris, utilitzaria <code>sudo usermod -aG nomdelgrup nomusuari</code>, però com que no és el nostre cas no l'utilitzarem.</p><img src="img/17.png" alt="Captura 18" loading="lazy"><img src="img/18.png" alt="Captura 19" loading="lazy"></div></div>
+    <a class="up" href="#top">↑ Tornar a l'índex</a></section>
+    
+    <section id="paquets"><h2>4. Gestió de paquets</h2>
+    <h3>apt</h3>
+    <div class="step"><span class="n">1</span><div><p>Quan el sistema ja està instal·lat, és important saber instal·lar, actualitzar i esborrar programes. Ubuntu té diverses eines per fer-ho, algunes més automàtiques que d'altres. Jo faig servir <code>apt</code>. Abans de res executo sempre <code>sudo apt update</code>, que no instal·la res: només actualitza la llista de programes disponibles perquè el sistema sàpiga quines versions existeixen.</p><img src="img/19.png" alt="Captura 20" loading="lazy"></div></div>
+    <div class="step"><span class="n">2</span><div><p><code>apt upgrade</code> — Posa al dia els programes que ja tens instal·lats a l'última versió disponible, però no n'instal·la de nous. És una manera segura de mantenir el sistema actualitzat sense sorpreses.</p><img src="img/20.png" alt="Captura 21" loading="lazy"></div></div>
+    <div class="step"><span class="n">3</span><div><p><code>apt install paquet</code> — Instal·la un programa nou (per exemple, <code>apt install figlet</code>), descarregant-lo i instal·lant automàticament tot el que necessita per funcionar, com les seves dependències. Per comprovar que s'ha instal·lat bé, executo <code>figlet "Hola Robert!"</code>, que escriu el missatge en lletres grans al terminal.</p><img src="img/21.png" alt="Captura 22" loading="lazy"></div></div>
+    <div class="step"><span class="n">4</span><div><p><code>apt remove paquet</code> — Desinstal·la un programa (per exemple, <code>apt remove figlet</code>), però deixa els seus arxius de configuració al sistema per si el vols tornar a instal·lar més endavant.</p><p><code>apt autoremove</code> — Esborra els programes que es van instal·lar automàticament perquè un altre els necessitava i que ara ja no serveixen per a res. És bo executar-lo de tant en tant per mantenir el sistema net.</p><img src="img/22.png" alt="Captura 23" loading="lazy"></div></div>
+    
+    <h3>aptitude</h3>
+    <div class="step"><span class="n">5</span><div><p>Per utilitzar <code>aptitude</code> primer l'hem d'instal·lar. La diferència respecte a <code>apt</code> és que recorda les dependències que va instal·lar per a cada paquet: si després el desinstal·les, esborra també aquestes dependències, sempre que cap altre paquet les faci servir.</p><img src="img/23.png" alt="Captura 24" loading="lazy"></div></div>
+    <div class="step"><span class="n">6</span><div><p><code>aptitude install paquet</code> — Instal·la un programa nou (per exemple, <code>aptitude install figlet</code>), igual que <code>apt install</code>, però recorda quines dependències s'han instal·lat només per aquest programa, i així després es poden esborrar més fàcilment.</p><img src="img/24.png" alt="Captura 25" loading="lazy"></div></div>
+    <div class="step"><span class="n">7</span><div><p><code>aptitude remove paquet</code> — Desinstal·la un programa (per exemple, <code>aptitude remove figlet</code>) i, si cap altre programa en depèn, també esborra les dependències que s'havien instal·lat amb ell.</p><img src="img/25.png" alt="Captura 26" loading="lazy"></div></div>
+    <div class="step"><span class="n">8</span><div><p><code>aptitude purge paquet</code> — Fa el mateix que <code>remove</code>, però a més esborra tots els arxius de configuració del programa, de manera que no en queda cap rastre al sistema. Com aquí el paquet ja estava esborrat, surt que no s'esborra perquè no està instal·lat.</p><img src="img/26.png" alt="Captura 27" loading="lazy"></div></div>
+    
+    <h3>apt show</h3>
+    <div class="step"><span class="n">9</span><div><p><code>apt show paquet</code> — Mostra la informació d'un programa sense instal·lar-lo: la versió, la mida, de quins altres paquets depèn, la pàgina web i una descripció del que fa. Va bé per saber què és un programa abans de decidir si l'instal·les.</p><img src="img/27.png" alt="Captura 28" loading="lazy"></div></div>
+    
+    <h3>dpkg</h3>
+    <div class="step"><span class="n">10</span><div><p><code>dpkg</code> és una eina més bàsica que <code>apt</code>: treballa amb arxius .deb que ja has descarregat i no instal·la les dependències per tu, així que si en falta alguna dóna error.</p><p><code>dpkg -i arxiu.deb</code> — Instal·la un programa a partir d'un arxiu .deb que ja tens al disc. Jo he baixat l'arxiu amb <code>apt download sl</code> i l'he instal·lat amb <code>dpkg -i sl_*.deb</code>. Per comprovar-ho, executo <code>sl</code> al terminal.</p><img src="img/28.png" alt="Captura 29" loading="lazy"></div></div>
+    <div class="step"><span class="n">11</span><div><p><code>dpkg -r paquet</code> — Desinstal·la un programa instal·lat amb dpkg, però deixa els seus arxius de configuració al sistema. Jo l'he desinstal·lat amb <code>dpkg -r sl</code>.</p><img src="img/29.png" alt="Captura 30" loading="lazy"></div></div>
+    <div class="step"><span class="n">12</span><div><p><code>dpkg -s paquet</code> — Mostra l'estat d'un programa i la seva informació (versió, mida, dependències i descripció). Serveix per comprovar si un programa està instal·lat: si surt <code>Status: install ok installed</code>, vol dir que sí. Jo l'he provat amb <code>dpkg -s sl</code>.</p><img src="img/30.png" alt="Captura 31" loading="lazy"></div></div>
+    <div class="step"><span class="n">13</span><div><p><code>dpkg -P paquet</code> — Desinstal·la el programa i, a més, esborra tots els seus arxius de configuració, de manera que no en queda cap rastre. Jo l'he fet servir amb <code>dpkg -P sl</code>.</p><img src="img/31.png" alt="Captura 32" loading="lazy"></div></div>
+    <div class="step"><span class="n">14</span><div><p><code>dpkg --get-selections | grep paquet</code> — Mostra la llista de tots els programes que el sistema coneix i en filtra el que busques. Si no surt cap resultat, vol dir que el programa no està instal·lat. Jo l'he provat amb <code>dpkg --get-selections | grep sl</code>, i a la llista surten també altres paquets que contenen les lletres «sl» al nom, però entre ells hi ha <code>sl</code>, així que està instal·lat.</p><img src="img/32.png" alt="Captura 33" loading="lazy"></div></div>
+    <div class="step"><span class="n">15</span><div><p>Pràctica amb el paquet <code>sl</code>. Per provar dpkg he fet servir el paquet <code>sl</code>, un programa petit que dibuixa un tren al terminal. Primer l'he instal·lat amb <code>sudo apt install sl</code>. Després he comprovat amb <code>ls *.deb</code> que tenia l'arxiu .deb a la meva carpeta personal i l'he instal·lat amb <code>sudo dpkg -i sl_*.deb</code>. Amb el paquet instal·lat, he escrit <code>sl</code> i m'ha sortit el tren passant pel terminal, així que la instal·lació ha funcionat.</p></div></div>
+    <a class="up" href="#top">↑ Tornar a l'índex</a></section>
+    
+    <section id="grub"><h2>5. Gestor d'arrencada (GRUB2)</h2>
+    <p>El gestor d'arrencada és el programa que fa que l'ordinador engegui el sistema operatiu. A Ubuntu es fa servir GRUB2. El disc pot ser MBR (antic, només fins a 2 TB) o GPT (modern, més segur i per a discos grans). Si en arrencar surt l'error <code>grub rescue</code>, vol dir que el sistema no sap com arrencar, i es pot arreglar reinstal·lant el gestor.</p>
+    <p>En aquesta pràctica trenco el GRUB a propòsit i el reparo de dues maneres: amb Super Grub2 Disk i amb Boot-Repair. Ho faig a la meva màquina virtual perquè no afecti l'ordinador real.</p>
+    <div class="step"><span class="n">1</span><div><p>Entro com a administrador i vaig a la carpeta /boot amb <code>sudo su</code> i <code>cd /boot</code>. Amb <code>ls</code> veig que hi ha la carpeta <code>grub</code>, els nuclis de Linux (<code>vmlinuz-...</code>) i els fitxers <code>initrd</code>.</p><img src="img/33.png" alt="Captura 34" loading="lazy"></div></div>
+    <div class="step"><span class="n">2</span><div><p>Després esborro la carpeta <code>grub/</code>, que és on hi ha el gestor d'arrencada, amb <code>rm -r grub/</code>. Així trenco el GRUB a propòsit.</p><img src="img/34.png" alt="Captura 35" loading="lazy"></div></div>
+    <div class="step"><span class="n">3</span><div><p>Quan tornem a fer <code>ls</code> podem veure que la carpeta <code>grub</code> ja no hi és.</p><img src="img/35.png" alt="Captura 36" loading="lazy"></div></div>
+    <div class="step"><span class="n">4</span><div><p>Al reiniciar la màquina apareix l'error <code>file '/boot/grub/i386-pc/normal.mod' not found</code> i el sistema entra en mode rescat, així que no podem arrencar Ubuntu.</p><img src="img/36.png" alt="Captura 37" loading="lazy"></div></div>
+    <div class="step"><span class="n">5</span><div><p>Apago la màquina virtual, vaig a Configuració → Emmagatzematge i poso la ISO de Super Grub2 Disk (<code>super_grub2_disk_hybrid_2.02s3.iso</code>) al lector de CD.</p><img src="img/37.png" alt="Captura 38" loading="lazy"></div></div>
+    <div class="step"><span class="n">6</span><div><p>En reiniciar, surt el menú de Super Grub2 Disk. Hi trio la primera opció, <code>Detect and show boot methods</code>, que busca els sistemes operatius que hi ha al disc i me'ls mostra per poder triar quin arrencar.</p><img src="img/38.png" alt="Captura 39" loading="lazy"></div></div>
+    <p class="note">Fallo tècnic: hi ha un problema amb les opcions i no ens apareix la que necessitem. Per solucionar-ho deixem de banda Super Grub2 i ho fem amb Boot-Repair.</p>
+    <div class="step"><span class="n">7</span><div><p>Un cop arrencada la ISO, s'obre l'escriptori de Boot-Repair-Disk amb la finestra de Boot Repair. Clico <code>Recommended repair</code>, que detecta l'error del gestor d'arrencada i el repara automàticament.</p><img src="img/39.jpg" alt="Captura 40" loading="lazy"></div></div>
+    <div class="step"><span class="n">8</span><div><p>Boot-Repair soluciona l'error i repara la màquina. Reiniciem i ja podem entrar amb normalitat.</p><img src="img/40.png" alt="Captura 41" loading="lazy"><img src="img/41.png" alt="Captura 42" loading="lazy"></div></div>
+    <div class="step"><span class="n">9</span><div><p>Per últim, per comprovar que la reparació ha funcionat al 100%, una vegada dins d'Ubuntu entro al terminal i executo <code>ls /boot/grub</code>. Surt la carpeta que s'havia esborrat, ja recreada, així que la reparació està completa.</p><img src="img/42.png" alt="Captura 43" loading="lazy"></div></div>
+    <a class="up" href="#top">↑ Tornar a l'índex</a></section>
+    </main>
+
+    
   </section>
 </main>
 
