@@ -3,67 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Índex de sprints</title>
-<link rel="stylesheet" href="css/estils.css">
+<title>Sprints Ubuntu</title>
+<style>
+  :root { --bg:#ffffff; --fg:#1f2430; --muted:#5b6270; --card:#f3f5fa; --line:#d5d9e3; --accent:#1f4fbf; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#14171f; --fg:#e8eaf0; --muted:#a0a7b8; --card:#1d212c; --line:#323847; --accent:#7ea2ff; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif; background:var(--bg); color:var(--fg); line-height:1.55; }
+  nav { display:flex; flex-wrap:wrap; gap:18px; padding:14px 24px; border-bottom:1px solid var(--line); }
+  nav a { color:var(--accent); text-decoration:none; font-weight:600; }
+  nav a:hover { text-decoration:underline; }
+  main { max-width:860px; margin:0 auto; padding:24px; }
+  .crumbs { color:var(--muted); font-size:.92rem; }
+  .crumbs a { color:var(--accent); text-decoration:none; }
+  h1 { margin:.4em 0 .2em; }
+  .sub { color:var(--muted); margin-top:0; }
+  .cards { display:grid; gap:14px; margin:22px 0; }
+  .card { display:block; padding:16px 18px; background:var(--card); border:1px solid var(--line); border-radius:10px; color:inherit; text-decoration:none; }
+  .card:hover { border-color:var(--accent); }
+  .card small { color:var(--muted); font-weight:700; letter-spacing:.06em; }
+  .card h2 { margin:.15em 0 .3em; font-size:1.15rem; }
+  .card span { color:var(--accent); font-weight:600; }
+  .badge { display:inline-block; font-size:.75rem; padding:2px 8px; border-radius:999px; border:1px solid var(--line); color:var(--muted); margin-left:8px; }
+  .note { padding:14px 16px; background:var(--card); border-left:4px solid var(--accent); border-radius:6px; }
+  footer { max-width:860px; margin:30px auto 40px; padding:0 24px; color:var(--muted); font-size:.9rem; }
+  footer a { color:var(--accent); }
+</style>
 </head>
 <body>
-
-<header class="hero">
-  <nav class="hero-nav">
-    <a href="index.html">Portada</a>
-    <a href="sprints.html">Índex de sprints</a>
-    <a href="https://github.com/" target="_blank" rel="noopener">Codi a GitHub ↗</a>
-  </nav>
-  <div class="hero-titol">
-    <p class="miguetes"><a href="index.html">Portada</a> / Índex de sprints</p>
-    <h1>Índex de sprints</h1>
-    <p class="subtitol">Tots els sprints del curs, organitzats per carpetes</p>
-  </div>
-</header>
-
-<main class="contenidor">
-  <section class="panell">
-    <p>Aquí tens el llistat de tots els sprints del curs. Cada sprint té la seva pròpia carpeta
-       i el seu propi índex d'apartats.</p>
-
-    <div class="rejilla-targetes">
-
-      <a class="targeta" href="sprint1/index.html">
-        <span class="numero">SPRINT 1</span>
-        <h3>Instal·lació i configuració inicial</h3>
-        <p>Veure apartats →</p>
-      </a>
-
-      <a class="targeta" href="sprint2/index.html">
-        <span class="numero">SPRINT 2</span>
-        <h3>Gestió de programari i usuaris</h3>
-        <p>Veure apartats →</p>
-      </a>
-
-      <a class="targeta" href="sprint3/index.html">
-        <span class="numero">SPRINT 3</span>
-        <h3>Seguretat i administració</h3>
-        <p>Veure apartats →</p>
-      </a>
-
-    </div>
-
-    <p class="consell">
-      💡 Necessites afegir el Sprint 4? Duplica la carpeta <code>sprint3</code>, canvia-li el nom a
-      <code>sprint4</code> i afegeix aquí una targeta nova copiant una de les de dalt.
-    </p>
-  </section>
-</main>
-
-<footer class="peu">
-  <p class="peu-llicencia">
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" target="_blank" rel="license noopener">
-      <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="Llicència Creative Commons Reconeixement-NoComercial-CompartirIgual 4.0" width="88" height="31">
+<nav>
+  <a href="index.html">Portada</a>
+  <a href="sprints.html">Sprints (Ubuntu)</a>
+  <a href="sprints-windows.html">Sprints (Windows)</a>
+  <a href="https://github.com/" target="_blank" rel="noopener">Codi a GitHub ↗</a>
+</nav>
+<main>
+  <div class="crumbs"><a href="index.html">Portada</a> / Sprints Ubuntu</div>
+  <h1>Sprints Ubuntu</h1>
+  <p class="sub">Tots els sprints del curs fets amb Ubuntu, organitzats per carpetes</p>
+  <p>Aquí tens el llistat dels sprints fets amb <strong>Ubuntu</strong>. Cada sprint té la seva pròpia carpeta i el seu propi índex d'apartats.</p>
+  <div class="cards">
+    <a class="card" href="sprint1/index.html">
+      <small>SPRINT 1</small>
+      <h2>Instal·lació i configuració inicial</h2>
+      <span>Veure apartats →</span>
     </a>
-    <span>Contingut sota llicència <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" target="_blank" rel="license noopener">CC BY-NC-SA 4.0</a></span>
-  </p>
-  <p class="autoria">Autor/a: <strong>Robert Gabriel Ciapa Gutu</strong> · Pràctica 0 · Sistemes Operatius (ISOPJ1)</p>
+    <a class="card" href="sprint2/index.html">
+      <small>SPRINT 2</small>
+      <h2>Gestió de programari i usuaris</h2>
+      <span>Veure apartats →</span>
+    </a>
+    <a class="card" href="sprint3/index.html">
+      <small>SPRINT 3</small>
+      <h2>Seguretat i administració</h2>
+      <span>Veure apartats →</span>
+    </a>
+    <a class="card" href="sprint4/index.html">
+      <small>SPRINT 4</small><span class="badge">Pendent</span>
+      <h2>Automatització i tasques programades</h2>
+      <span>Veure apartats →</span>
+    </a>
+    <a class="card" href="sprint5/index.html">
+      <small>SPRINT 5</small><span class="badge">Pendent</span>
+      <h2>Serveis de xarxa i emmagatzematge compartit</h2>
+      <span>Veure apartats →</span>
+    </a>
+  </div>
+  <p class="note">💡 Quan acabi el sprint 4 o el 5, només cal canviar el contingut de <code>sprint4/index.html</code> o <code>sprint5/index.html</code> i treure-li l'etiqueta «Pendent» a la targeta d'aquí dalt.</p>
+</main>
+<footer>
+  <p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca"><img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="Llicència Creative Commons Reconeixement-NoComercial-CompartirIgual 4.0"></a><br>
+  Contingut sota llicència <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca">CC BY-NC-SA 4.0</a></p>
+  <p>Autor/a: <strong>Robert Ciapa Gutu</strong> · Pràctica 0 · Sistemes Operatius (ISOPJ1)</p>
 </footer>
-
 </body>
 </html>
